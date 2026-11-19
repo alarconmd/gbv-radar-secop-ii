@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="Radar interactivo de oportunidades SECOP II para el Laboratorio de Proyectos GBV.">
+  <title>GBV · Radar interactivo SECOP II</title>
+  <meta property="og:title" content="GBV · Radar interactivo SECOP II"><meta property="og:description" content="Oportunidades de contratación pública para el Laboratorio de Proyectos."><meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="web_styles.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#radar">Saltar al radar</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="GBV, inicio"><strong>GBV</strong><span>Laboratorio de Proyectos</span></a>
+    <nav class="main-nav" aria-label="Navegación principal"><a href="#decision">Estrategia</a><a href="#radar">Radar</a><a href="#metodologia">Metodología</a></nav>
+    <div class="header-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="Cambiar a tema oscuro">Tema</button><a class="button button-small button-outline" href="GBV_Radar_SECOP_II_Laboratorio_Proyectos_19NOV2026.pdf" download>Descargar PDF</a></div>
+  </div></header>
+  <main>
+    <section class="hero" id="inicio"><div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div><div class="container hero-content">
+      <p class="eyebrow">Radar de contratación pública · Colombia</p><h1>Oportunidades<br><span>SECOP II</span></h1>
+      <p class="hero-lead">Una lectura interactiva para decidir dónde estructurar, consorciar, invertir o activar aliados.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#radar">Explorar oportunidades</a><a class="button button-ghost" href="documento.html" target="_blank" rel="noopener">Ver documento ejecutivo ↗</a></div>
+      <div class="hero-metrics" aria-label="Resumen del radar"><div><strong>21</strong><span>ofertas priorizadas</span></div><div><strong>8</strong><span>sectores analizados</span></div><div><strong>9</strong><span>proyectos en vigilancia</span></div><div><strong>100%</strong><span>barrido nacional</span></div></div>
+    </div></section>
+    <div class="data-notice"><div class="container"><span class="status-dot"></span><strong>Corte de datos:</strong> 19 noviembre 2026 · 06:32 hora Colombia <span class="notice-separator">|</span> Fuente oficial SECOP II · dataset <code>p6dx-8zbt</code></div></div>
+    <section class="section" id="decision"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">Decisión de portafolio</p><h2>El tamaño no equivale a afinidad</h2></div><p>GBV debe entrar como estructurador, socio de inversión o integrante de consorcios; no como proveedor general.</p></div>
+      <div class="strategy-grid">
+        <article class="strategy-card"><span class="card-number">01</span><h3>Estructurar y consorciar</h3><p>Factibilidad, financiación, APP, auditoría e interventoría financiera. Seis oportunidades núcleo con necesidad de capacidades complementarias.</p><button class="text-link filter-shortcut" data-group="core" type="button">Ver núcleo GBV →</button></article>
+        <article class="strategy-card featured"><span class="card-number">02</span><h3>Invertir con un operador</h3><p>Malambo abre una conversación de socio privado y economía mixta. GBV estructura; el operador aporta la capacidad de servicio.</p><button class="text-link search-shortcut" data-search="Malambo" type="button">Ver Malambo →</button></article>
+        <article class="strategy-card"><span class="card-number">03</span><h3>Movilizar la red</h3><p>Canalizar compras a EPC, operadores TIC, constructores y especialistas. La financiación posadjudicación es un análisis independiente.</p><button class="text-link filter-shortcut" data-group="ally" type="button">Ver oportunidades para aliados →</button></article>
+      </div>
+      <div class="warning-banner"><strong>Importante:</strong> una fecha futura no implica recepción abierta. Los procesos en observaciones están identificados como <span class="badge badge-watch">Vigilancia</span> y no como ofertas abiertas.</div>
+    </div></section>
+    <section class="section section-radar" id="radar"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">Radar interactivo</p><h2>Explorar oportunidades</h2></div><p>Filtra, ordena y abre el detalle de cada proceso. Los enlaces dirigen al aviso oficial.</p></div>
+      <form class="filters" id="filters" aria-label="Filtros de oportunidades">
+        <div class="field field-search"><label for="search">Buscar</label><input id="search" name="search" type="search" placeholder="Entidad, proceso, sector u objeto…" autocomplete="off"></div>
+        <div class="field"><label for="sector">Sector</label><select id="sector" name="sector"><option value="all">Todos los sectores</option></select></div>
+        <div class="field"><label for="group">Tipo de participación</label><select id="group" name="group"><option value="all">Todas</option><option value="core">Núcleo GBV · A</option><option value="ally">Aliados · B</option><option value="watch">Vigilancia</option></select></div>
+        <div class="field"><label for="sort">Ordenar por</label><select id="sort" name="sort"><option value="priority">Prioridad GBV</option><option value="close">Cierre más próximo</option><option value="budget-desc">Mayor presupuesto</option><option value="budget-asc">Menor presupuesto</option></select></div>
+        <button class="button button-reset" id="reset" type="button">Limpiar</button>
+      </form>
+      <div class="results-toolbar"><p id="result-count" aria-live="polite">Cargando oportunidades…</p><div><button class="text-button" id="expand-all" type="button">Expandir detalles</button><button class="text-button" id="print-page" type="button">Imprimir vista</button></div></div>
+      <div class="opportunity-list" id="opportunity-list"></div>
+      <div class="empty-state" id="empty-state" hidden><h3>No hay coincidencias</h3><p>Prueba con otro término o restablece los filtros.</p><button class="button button-primary" type="button" id="empty-reset">Restablecer filtros</button></div>
+      <noscript><p class="warning-banner">Activa JavaScript para usar los filtros. También puedes abrir el <a href="documento.html">documento ejecutivo</a>.</p></noscript>
+    </div></section>
+    <section class="section" id="metodologia"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">Trazabilidad</p><h2>Metodología y uso responsable</h2></div><p>Datos oficiales, filtros explícitos y distinción entre participación y vigilancia.</p></div>
+      <div class="method-grid"><article><span>01</span><h3>Universo depurado</h3><p>1.149 registros vigentes en fases de oferta; 375 en modalidades ordinarias abiertas y 111 de régimen especial con ofertas.</p></article><article><span>02</span><h3>Exclusiones</h3><p>Cancelados, vencidos, adjudicados, observaciones, mínima cuantía, contratación directa, solicitudes de información y falsos positivos.</p></article><article><span>03</span><h3>Antes de ofertar</h3><p>Revisar pliego, anexos, experiencia, garantías, RUP, consorcios, presencia local, reglas para extranjeros y última versión en SECOP.</p></article></div>
+      <div class="source-box"><div><h3>Fuente oficial</h3><p>Agencia Nacional de Contratación Pública – Colombia Compra Eficiente.</p></div><a class="button button-outline" href="https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt/about_data" target="_blank" rel="noopener">Abrir dataset ↗</a></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div><strong>GBV · Laboratorio de Proyectos</strong><p>Documento de trabajo. No certifica habilitación ni constituye asesoría legal.</p></div><div><a href="https://github.com/alarconmd/gbv-radar-secop-ii" target="_blank" rel="noopener">Código en GitHub ↗</a><a href="#inicio">Volver arriba ↑</a></div></div></footer>
+</body>
+</html>
+
